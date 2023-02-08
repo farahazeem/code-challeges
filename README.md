@@ -27,5 +27,5 @@ Use angular version 14 or above to create the following pages:
 3.  Product detail page comes with header
     - Display a product details - (Feel free to design your own idea)
 
-
-Note: When you submit your code. Please DO NOT push to the main branh, create a pull request instead.
+<br/>
+<b>Note: When submitting your code. Please DO NOT directly push to the main branch. Instead, you should fork this repo, then create a pull request.</b>
