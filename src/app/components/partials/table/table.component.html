@@ -1,0 +1,18 @@
+<div class="container">
+  <table class="list-table">
+    <tr>
+      <ng-container *ngFor="let header of headers | keyvalue">
+        <th *ngIf="header.key !== 'images'">{{header.key}}</th>
+      </ng-container>
+    </tr>
+
+    <tr *ngFor="let item of items">
+      <ng-container *ngFor="let property of item | keyvalue">
+        <td *ngIf="property.key === 'id'"><a routerLink="/{{typeOfItems}}/{{property.value}}">
+          {{property.value}}</a></td>
+        <td *ngIf="property.key !== 'images' && property.key !== 'id' && isObject(property.value)">{{property.value}}</td>
+        <td *ngIf="property.key !== 'images' && !isObject(property.value)">{{objectToString(property.value)}}</td>
+      </ng-container>
+    </tr>
+  </table>
+</div>

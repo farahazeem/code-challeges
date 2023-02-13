@@ -1,0 +1,36 @@
+header {
+  position: relative;
+  background: white;
+  padding: 0;
+  border-bottom: 1px solid lightgray;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+a {
+  color: rgb(54, 53, 53);
+}
+
+a:hover {
+  background: gray;
+  color: white;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+
+ul a  {
+  padding: 1rem;
+  display: inline-block;
+}
+
+.is-active {
+  background-color: lightgray;
+}

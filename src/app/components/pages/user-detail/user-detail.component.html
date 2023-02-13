@@ -1,0 +1,22 @@
+<section id="user-page" *ngIf="user">
+  <div class="user-details">
+    <div class="user-img">
+      <img [src]="userImage" />
+    </div>
+    <div class="user-text">
+      <span class="user-dob">{{user.birthDate | date}}</span>
+      <h3>{{fullName(user.firstName, user.maidenName, user.lastName)}}</h3>
+      <span class="user-phone">{{user.phone}}</span>
+      <p><b>Email:</b> {{user.email}}</p>
+      <p><b>Address:</b>{{getAddress(user.address)}}</p>
+      <div class="user-bio">
+        <strong>User Bio:</strong>
+        <p><b>BloodGroup:</b> {{user.bloodGroup}} &nbsp;</p>
+        <p><b>Height:</b> {{user.height}} &nbsp;</p>
+        <p><b>Weight:</b> {{user.weight}} &nbsp;</p>
+        <p><b>EyeColor:</b> {{user.eyeColor}} &nbsp;</p>
+        <p><b>Hair Type:</b> {{user.hair.color}} and {{user.hair.type}}</p>
+      </div>
+    </div>
+  </div>
+</section>

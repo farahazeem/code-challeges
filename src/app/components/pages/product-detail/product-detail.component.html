@@ -1,0 +1,38 @@
+<section id="product-page" *ngIf="product">
+  <div class="product-details">
+    <div class="product-img">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="slider-img" [src]="imageToShow" />
+          </div>
+        </div>
+
+        <div class="slider-btns">
+          <button class="swiper-button-prev" [disabled]="index === 0" (click)="prevImage()">&lt;</button>
+          <button class="swiper-button-next" [disabled]="index === numberOfImages - 1"
+            (click)="nextImage()">&gt;</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-text">
+      <span class="product-category">{{product.brand}}</span>
+      <h3>{{product.title}}</h3>
+      <span class="product-price">{{product.price | currency}} | {{ product.rating }}</span><span
+        class="product-rating">★</span>
+      <p>{{product.description}}</p>
+
+      <div class="product-description">
+        <strong>Description:-</strong>
+        <p><b>Category:</b> {{product.category}}</p>
+        <p><b>In Stock:</b> {{product.stock}}</p>
+        <p><b>Sale Price:</b> {{salePrice()}}</p>
+      </div>
+
+      <div class="product-button">
+        <a href="javascript:;" class="add-bag-btn">Add To Bag</a>
+        <a href="javascript:;" class="add-wishlist-btn">Add To Wishlist</a>
+      </div>
+    </div>
+  </div>
+</section>
